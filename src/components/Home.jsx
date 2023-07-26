@@ -23,7 +23,7 @@ const Home = () => {
 
         {movies &&  <>
                         <Movielist movies={movies} title="All movie"/>
-                        <Movielist movies={movies} title="Action movie"/>
+                        <Movielist movies={movies.filter((m)=>{ return m.genre.toLowerCase().includes("action") })} title="Action movie"/>
                     </>}
         </div>
     );
