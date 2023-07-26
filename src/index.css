@@ -63,3 +63,31 @@ nav{
   font-size:40px;
   color: white;
 }
+
+.home{
+  padding: 10px 100px;
+}
+.home>h1{
+  color: #3AAFA9;
+  font-size: 35px;
+  margin: 20px 0px;
+}
+.movies-list{
+  width: 95%;
+  margin: auto;
+  display: flex;
+  overflow: scroll;
+}
+.movie{
+  width: 270px;
+  height: auto;
+  margin: 3px 10px;
+  padding: 5px 8px;
+  border: solid 1px black;
+  border-radius: 7px;
+}
+.movie img{
+  width: 250px;
+  height: 300px;
+  border-radius: 7px;
+}
