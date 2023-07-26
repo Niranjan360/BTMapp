@@ -1,0 +1,21 @@
+{
+    "movies" : [
+        {
+            "id":1,
+            "moviename":"KGF",
+            "hero":"yash",
+            "heroine":"shreenidhi shetty",
+            "director":"prashanth neel",
+            "production":"Hombale movies",
+            "cast":["vashishta" , "sanju" ,"prakash rai" , "ananth nag" ,"garuda"],
+            "genre":"action drama",
+            "duration":"2h 30m ",
+            "releasedate":"April-May  2019 (India)",
+            "rating":7.5,
+            "languages":["kannada" ,"telgu","tamil","hindi","malayalam"],
+            "posterurl":"https://assets-in.bmscdn.com/iedb/movies/images/mobile/thumbnail/xlarge/kgf-et00042769-15-12-2020-08-08-47.jpg",
+            "trailerurl":"https://www.youtube.com/embed/qXgF-iJ_ezE",
+            "synopsis":""
+        }
+    ]
+}

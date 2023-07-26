@@ -1,0 +1,65 @@
+*{
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  color: black;
+}
+nav{
+  background-color:#3AAFA9 ;
+  width: 100vw;
+  height: 80px;
+  margin: auto;
+  padding: 0px 70px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#logo a{
+  font-size:24px;
+  color: white;
+  text-decoration: none;
+}
+#logo a span{
+  color: white;
+  font-size: 40px;
+}
+#searchbar input{
+  width: 300px;
+  height: 35px;
+  padding-left: 20px;
+  border: none;
+  border-radius: 20px 0px 0px 20px;
+  font-size: 15px;
+}
+#searchbar button{
+  background-color: #17252A;
+  color: white;
+  width: 100px;
+  height: 35px;
+  border: 1px solid #17252A;
+  border-radius: 0px 20px 20px 0px;
+  font-size: 15px;
+}
+#searchbar button:hover{
+  background-color: white;
+  color: #17252A;
+}
+#nav-link{
+  display: flex;
+}
+#nav-link a{
+  color: white;
+  margin: 0px 15px;
+  text-decoration: none;
+}
+#nav-link a:first-child , #nav-link a:nth-child(2)  {
+  color: #17252A;
+  background-color: white;
+  padding: 8px 18px;
+  border-radius: 3px;
+}
+#nav-link a:last-child{
+  font-size:40px;
+  color: white;
+}
