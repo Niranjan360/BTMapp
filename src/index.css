@@ -78,16 +78,46 @@ nav{
   display: flex;
   overflow: scroll;
 }
+.movies-list::-webkit-scrollbar{
+  display: none;
+}
 .movie{
-  width: 270px;
+  background-color: #DEF2F1;
+  width: 220px;
   height: auto;
   margin: 3px 10px;
-  padding: 5px 8px;
-  border: solid 1px black;
+  padding: 5px 10px;
   border-radius: 7px;
+  transition: 0.3s;
+}
+.movie:hover{
+  transform: scale(1.05);
+}
+
+.movie h1{
+  font-size: 20px;
 }
 .movie img{
-  width: 250px;
-  height: 300px;
+  width: 200px;
+  height: 250px;
   border-radius: 7px;
+}
+
+#loader{
+  width: 200px;
+  height: 200px;
+  margin: 20px auto;
+  border-top: dotted 10px black;
+  border-left: dotted 10px black;
+  border-radius: 50%;
+  animation: load 1s infinite linear;
+}
+@keyframes load {
+  0%{
+    transform: rotate(0deg);
+  }
+  100%{
+    transform: rotate(360deg);
+  }
+  
 }
