@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Bacasime+Antique&family=Belanosima:wght@600&display=swap');
+
 *{
   margin: 0px;
   padding: 0px;
@@ -16,9 +18,12 @@ nav{
   align-items: center;
 }
 #logo a{
-  font-size:24px;
+  font-size:27px;
   color: white;
   text-decoration: none;
+  font-family: 'Belanosima', sans-serif;
+  display: flex;
+  align-items: center;
 }
 #logo a span{
   color: white;
@@ -41,7 +46,7 @@ nav{
   border-radius: 0px 20px 20px 0px;
   font-size: 15px;
 }
-#searchbar button:hover{
+#searchbar button:active{
   background-color: white;
   color: #17252A;
 }
@@ -49,23 +54,32 @@ nav{
   display: flex;
 }
 #nav-link a{
+  font-size: 16px;
+  font-weight: 600;
   color: white;
   margin: 0px 15px;
   text-decoration: none;
+  transition: 0.3s;
 }
 #nav-link a:first-child , #nav-link a:nth-child(2)  {
-  color: #17252A;
-  background-color: white;
+  color: white;
+  background-color: #3AAFA9;
   padding: 8px 18px;
   border-radius: 3px;
 }
+#nav-link a:first-child:hover , #nav-link a:nth-child(2):hover  {
+  color: #17252A;
+  background-color: white;
+}
+
 #nav-link a:last-child{
   font-size:40px;
   color: white;
 }
 
+/* ---------------------HOME---------------------------------- */
 .home{
-  padding: 10px 100px;
+  padding: 10px 70px;
 }
 .home>h1{
   color: #3AAFA9;
@@ -73,8 +87,9 @@ nav{
   margin: 20px 0px;
 }
 .movies-list{
-  width: 95%;
+  width: 100%;
   margin: auto;
+  padding: 10px;
   display: flex;
   overflow: scroll;
 }
@@ -86,7 +101,7 @@ nav{
   width: 220px;
   height: auto;
   margin: 3px 10px;
-  padding: 5px 10px;
+  padding: 10px;
   border-radius: 7px;
   transition: 0.3s;
 }
@@ -97,6 +112,10 @@ nav{
 .movie h1{
   font-size: 20px;
 }
+.movie p{
+  color: #17252A;
+  font-size: 20px;
+}
 .movie img{
   width: 200px;
   height: 250px;
@@ -104,20 +123,23 @@ nav{
 }
 
 #loader{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
   width: 200px;
   height: 200px;
-  margin: 20px auto;
   border-top: dotted 10px black;
   border-left: dotted 10px black;
   border-radius: 50%;
-  animation: load 1s infinite linear;
+  animation: load 1.5s infinite linear;
+
 }
 @keyframes load {
   0%{
-    transform: rotate(0deg);
+    transform: translate(-50% , -50%) rotate(0deg);
   }
   100%{
-    transform: rotate(360deg);
+    transform: translate(-50% , -50%)  rotate(360deg);
   }
-  
 }

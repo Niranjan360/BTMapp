@@ -46,7 +46,7 @@
             "duration":"2h 16m",
             "releasedate": "4th September 1998",
             "rating": 7.3,
-            "languages": "Hindi",
+            "languages": ["Hindi" , "English"],
             "trailerurl":"https://www.youtube.com/embed/qRrRhvLxbXw",
             "posterurl": "https://upload.wikimedia.org/wikipedia/en/7/7a/Gunda_film_poster.jpg",
             "synopsis":"When a coolie's family is murdered by a group of gangsters and politicians, he swears revenge on them. "
@@ -80,7 +80,7 @@
             "duration":"2h 39m",
             "releasedate": "30 December 2016",
             "rating": 8.3,
-            "languages":"kannada",
+            "languages":["kannada","Hindi","Tamil"],
             "trailerurl":"https://www.youtube.com/embed/IfvnbER_6sQ",
             "posterurl":"http://paramvah.com/images/banner/Kirik-Part-Poster3.jpg",
             "synopsis":"Kirik Party is the story of a gang of mischievous students, lead by the protagonist Karna (Rakshit Shetty), who has just joined an engineering college."
@@ -119,6 +119,5 @@
             "trailerurl":"https://youtu.be/Rbp2XUSeUNE",
             "synopsis":"Kabir and Naina meet during a trekking trip where she falls in love with him but refrains from expressing it. They soon drift apart but end up meeting at a friend's wedding."
         }
-
     ]
 }

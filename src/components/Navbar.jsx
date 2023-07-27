@@ -1,21 +1,22 @@
+import { Link } from "react-router-dom";
+
 const Navbar = () => {
     return ( 
         <nav>
             <div id="logo">
-                <a href="/">
+                <Link to="/">
                     <span>🕷</span>
                     MoviesHUB
-                </a>
+                </Link>
             </div>
             <div id="searchbar">
                 <input type="text" placeholder="Search Movies" />
                 <button>search</button>
             </div>
             <div id="nav-link">
-                <a href="/addmovie">Add Movie</a>
-                <a href="/favmovie">Watchlist</a>
-                <a href="/profile"  className='bx bxs-user-circle'> 
-                </a>
+                <Link to="/addmovie">Add Movie</Link>
+                <Link to="/favmovie">Watchlist</Link>
+                <Link to="/profile"  className='bx bxs-user-circle'> </Link>
             </div>
         </nav>
     );
