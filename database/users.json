@@ -1,0 +1,39 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "John Doe",
+      "email": "hohn@gmail.com",
+      "password": "john@123",
+      "phone": "9876543211"
+    },
+    {
+      "name": "alex",
+      "email": "alex@gmail",
+      "password": "alex@123",
+      "phone": "9876543212",
+      "id": 2
+    },
+    {
+      "name": "alex2",
+      "email": "alex2@gmail",
+      "password": "alex@123",
+      "phone": "9876543213",
+      "id": 4
+    },
+    {
+      "name": "alex3",
+      "email": "alex3@gmail",
+      "password": "alex@123",
+      "phone": "9876543214",
+      "id": 5
+    },
+    {
+      "name": "niranjan",
+      "email": "niranjan@gmail",
+      "password": "niranjan123",
+      "phone": "9876543210",
+      "id": 6
+    }
+  ]
+}

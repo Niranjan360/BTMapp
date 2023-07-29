@@ -32,22 +32,25 @@ const Home = () => {
             } , 3000)
     } , [])
 
+
     return ( 
-        <div className="home">
+        <>
+            <div className="home">
 
-        {error!=null && <h1> {error} </h1>}
+                    {error!=null && <h1> {error} </h1>}
 
-        {pending==true && <div id="loader"></div>}
+                    {pending==true && <div id="loader"></div>}
 
-        {movies &&  <>
-                        <Movielist movies={movies} title="All movies"/>
+                    {movies &&  <>
+                    <Movielist movies={movies} title="All movies"/>
 
-                        <Movielist movies={movies.filter((m)=>{ return m.rating>=8 })} title="Top rated movies"/>
+                    <Movielist movies={movies.filter((m)=>{ return m.rating>=8 })} title="Top rated movies"/>
 
-                        <Movielist movies={movies.filter((m)=>{ return m.languages[0].toLowerCase() =="hindi" })} title="Bollywood"/>
+                    <Movielist movies={movies.filter((m)=>{ return m.languages[0].toLowerCase() =="hindi" })} title="Bollywood"/>
 
-                    </>}
-        </div>
+                </>}
+            </div>            
+        </>
     );
 }
 export default Home;

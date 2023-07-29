@@ -7,6 +7,56 @@
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   color: black;
 }
+/* ----------------SIGNUP---------------- */
+
+.signup , .login{
+  text-align: center;
+}
+.signup h1 , .login h1{
+  margin: 20px auto;
+}
+.signup hr , .login hr{
+  width: 80%;
+  margin: 10px auto;
+  border: solid #3AAFA9 1px;
+}
+
+
+.signup form , .login form{
+  background-color: #3AAFA9;
+  width: 350px;
+  height: auto;
+  margin: 30px auto;
+  padding: 20px;
+  border-radius: 7px;
+}
+.signup form input  , .login form input {
+  display: block;
+  width: 90%;
+  height: 35px;
+  margin: 8px auto;
+  padding-left: 10px;
+  border: none;
+  border-radius: 4px;
+}
+.signup form input[type="submit"] ,
+.login form input[type="submit"] 
+{
+  width: 60%;
+  margin: 25px auto 20px auto;
+}
+
+.signup form input[type="submit"]:active ,
+.login form input[type="submit"]:active
+{
+    background-color: black;
+    color: white;
+}
+
+
+
+
+
 nav{
   background-color:#3AAFA9 ;
   width: 100vw;
@@ -16,6 +66,9 @@ nav{
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: sticky;
+  top: 0px;
+  z-index: 1000;
 }
 #logo a{
   font-size:27px;
@@ -143,3 +196,4 @@ nav{
     transform: translate(-50% , -50%)  rotate(360deg);
   }
 }
+
