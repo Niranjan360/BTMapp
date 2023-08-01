@@ -1,4 +1,5 @@
 import Addmovie from "./components/Addmovie";
+import Editmovie from "./components/Editmovie";
 import Home from "./components/Home";
 import Login from "./components/Login";
 import Moviedetails from "./components/Moviedetails";
@@ -28,6 +29,8 @@ function App()
           <Route path="/profile" element={<Protector Child={Profile}/>}/>
 
           <Route path="/moviedetails/:id" element={<Moviedetails/>}/>
+
+          <Route path="/edit/:id" element={<Editmovie/>}/>
 
         </Routes>
       </div>

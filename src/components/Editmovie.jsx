@@ -1,12 +1,10 @@
-import { useRef } from "react";
+import { useEffect, useRef } from "react";
 import Navbar from "./Navbar";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 
-const Addmovie = () => {
-
-    console.log("component rerenders");
+const Editmovie = () => {
 
     let moviename = useRef();    
     let hero = useRef();    
@@ -22,12 +20,33 @@ const Addmovie = () => {
     let trailer = useRef();    
     let synopsis = useRef();  
     
+    let {id} = useParams();
     let navigate = useNavigate();
 
-    let handleAddmovies = (e)=>{
+    useEffect(()=>{
+        fetch("http://localhost:4000/movies/"+id)
+        .then(res=>res.json())
+        .then((prevData)=>{
+            moviename.current.value = prevData.moviename;
+            hero.current.value= prevData.hero ;
+            heroine.current.value= prevData.heroine ;
+            director.current.value = prevData.director;
+            producer.current.value  = prevData.production;
+            cast.current.value = prevData.cast;
+            duration.current.value = prevData.duration;
+            // release.current.value = prevData.releasedate; not working
+            rating.current.value = prevData.rating;
+            poster.current.value = prevData.posterurl;
+            banner.current.value = prevData.banner;
+            trailer.current.value = prevData.trailerurl;
+            synopsis.current.value = prevData.synopsis;
+        })
+    } , [])
+
+    let handleEditmovie = (e)=>{
         e.preventDefault();
 
-        let newMovie = {
+        let updatedMovie = {
                             "moviename": moviename.current.value ,
                             "hero": hero.current.value,
                             "heroine": heroine.current.value,
@@ -50,7 +69,7 @@ const Addmovie = () => {
         {
             if( geners[i].checked )
             {
-                newMovie.genre =  newMovie.genre + " " + geners[i].value
+                updatedMovie.genre =  updatedMovie.genre + " " + geners[i].value
             }
         }
 
@@ -59,20 +78,20 @@ const Addmovie = () => {
         {
             if( lang[i].checked )
             {
-                newMovie.languages.push(lang[i].value);
+                updatedMovie.languages.push(lang[i].value);
             }
         }
 
-        fetch("http://localhost:4000/movies" , 
+        fetch("http://localhost:4000/movies/"+id , 
                                                 {
-                                                    method : "POST",
+                                                    method : "PUT",
                                                     headers:{'Content-Type': 'application/json'},
-                                                    body:JSON.stringify(newMovie)
+                                                    body:JSON.stringify(updatedMovie)
                                                 }
         )
         .then((res)=>{return (res.json());})
         .then((data)=>{ 
-            toast.success("New movie added successfully");
+            toast.success("movie updated successfully");
             setTimeout(()=>{
                 let res = window.confirm("Do you want to stay in same page or direct to details page ");
                 console.log(res);
@@ -93,10 +112,10 @@ const Addmovie = () => {
         <Navbar/>
 
         <div className="add-movie">
-            <h1>Add a new Movie</h1>
+            <h1>Edit Movie</h1>
             <ToastContainer />
 
-            <form onSubmit={handleAddmovies}>
+            <form onSubmit={handleEditmovie}>
                 <input type="text" placeholder="Movie name" ref={moviename}/>  
                 <input type="text" placeholder="Hero" ref={hero}/>
                 <input type="text" placeholder="Heroine" ref={heroine}/>
@@ -141,11 +160,11 @@ const Addmovie = () => {
 
                 <textarea cols="55" rows="7" placeholder="Synopsis" ref={synopsis}></textarea>
 
-                <input type="submit" value="Add new movie" />
+                <input type="submit" value="Update movie" />
             </form>
 
         </div>
         </>
     );
 }
-export default Addmovie;
+export default Editmovie;

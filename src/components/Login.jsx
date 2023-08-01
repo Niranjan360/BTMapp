@@ -5,6 +5,8 @@ import 'react-toastify/dist/ReactToastify.css';
 
 const Login = () => {
 
+    console.log("component rendered");
+
     let [name , setName] = useState("");
     let [password , setPassword] = useState("");
     let navigate = useNavigate();

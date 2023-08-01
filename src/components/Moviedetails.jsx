@@ -1,4 +1,4 @@
-import { useNavigate, useParams } from "react-router-dom";
+import { Link, useNavigate, useParams } from "react-router-dom";
 import Navbar from "./Navbar";
 import { useEffect, useState } from "react";
 import BeatLoader from "react-spinners/BeatLoader";
@@ -65,17 +65,20 @@ const Moviedetails = () => {
                                     <h1>{movie.moviename}</h1>
                                     <p>Hero : {movie.hero} , Heroine : {movie.heroine} </p>
                                     <p>Director : {movie.director}</p>
+                                    <p>Gener : {movie.genre}</p>
                                     <p>production House : {movie.production}</p>
                                     <p>Cast : {movie.cast.join("  ,  ")} </p>
                                     <p>Languages : {movie.languages.join("  ,  ")}</p>
                                     <p>Story : {movie.synopsis}</p>
+                                    <p><b>IMDB</b> : {movie.rating}</p>
+
                                 </div>
 
                                 <div className="trailer-cont">
                                     <h1>{movie.moviename} - Triler</h1>
                                     <iframe width="560" height="315" src={movie.trailerurl} title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                                 </div>
-                                <button>Edit Movie</button>
+                                <Link to={`/edit/${id}`}> <button>Edit Movie</button></Link>
                                 <button onClick={handleDelete}>Delete</button>
 
                             </div> }

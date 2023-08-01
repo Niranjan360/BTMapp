@@ -58,7 +58,6 @@
       "synopsis": "A spirited young girl would stop at nothing to get the first love of her life, even if it takes seven years and several heartbreaks."
     },
     {
-      "id": 4,
       "moviename": "Pathu thala",
       "hero": "Silambarasan Rajendar",
       "heroine": "Priya Bhavani Shankar",
@@ -69,21 +68,16 @@
         " Gajaraj",
         "Gautham karthik"
       ],
-      "genre": "Action drama",
+      "genre": " Action Thriller",
       "duration": "2h 31m",
-      "releasedate": "30 march 2023",
-      "rating": 7,
-      "languages": [
-        "Tamil",
-        "Kannada",
-        "Hindi",
-        "Telgu",
-        "English"
-      ],
-      "trailerurl": "https://www.youtube.com/embed/pnUUJY3HQZk",
-      "banner": "https://assets-in.bmscdn.com/iedb/movies/images/mobile/listing/xxlarge/pathu-thala-et00333005-1672646997.jpg",
+      "releasedate": "",
+      "rating": "9",
+      "languages": [],
       "posterurl": "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcSo9YjuqkmTNQcH0jFylkjQtaOgajlShITd76dVFJmAce3eeKCl",
-      "synopsis": "AGR (Silambarasan TR) is the head of an extremely powerful gang that is as influential as deciding every single move in Tamil Nadu politics. Guna (Goutham Karthik) shoots a police officer and seeks refuge in AGR's camp and it is revealed that Guna is actually an undercover cop. Do Guna and the police manage to nab AGR? Why is AGR involved in all the crimes?"
+      "banner": "https://assets-in.bmscdn.com/iedb/movies/images/mobile/listing/xxlarge/pathu-thala-et00333005-1672646997.jpg",
+      "trailerurl": "https://www.youtube.com/embed/pnUUJY3HQZk",
+      "synopsis": "AGR (Silambarasan TR) is the head of an extremely powerful gang that is as influential as deciding every single move in Tamil Nadu politics. Guna (Goutham Karthik) shoots a police officer and seeks refuge in AGR's camp and it is revealed that Guna is actually an undercover cop. Do Guna and the police manage to nab AGR? Why is AGR involved in all the crimes?",
+      "id": 4
     },
     {
       "id": 5,
@@ -162,6 +156,56 @@
       "posterurl": "https://upload.wikimedia.org/wikipedia/en/1/15/Yeh_jawani_hai_deewani.jpg",
       "banner": "https://assets-in.bmscdn.com/iedb/movies/images/mobile/listing/xxlarge/yeh-jawaani-hai-deewani-et00012104-09-11-2020-02-58-18.jpg",
       "synopsis": "Kabir and Naina meet during a trekking trip where she falls in love with him but refrains from expressing it. They soon drift apart but end up meeting at a friend's wedding."
+    },
+    {
+      "moviename": "kgf2",
+      "hero": "yash",
+      "heroine": "sreenidhi",
+      "director": "prashanth neel",
+      "production": "homble",
+      "cast": [
+        "garuda ",
+        " achhutha ",
+        " prakash"
+      ],
+      "genre": " Action Thriller",
+      "duration": "2hr 30mins",
+      "releasedate": "2022-07-07",
+      "rating": "8.3",
+      "languages": [
+        "Kannada",
+        "Hindi",
+        "Tamil",
+        "Telgu"
+      ],
+      "posterurl": "https://assets-in.bmscdn.com/iedb/movies/images/mobile/thumbnail/xlarge/kgf-chapter-2-et00098647-08-04-2022-11-33-32.jpg",
+      "banner": "https://assets-in.bmscdn.com/iedb/movies/images/mobile/listing/xxlarge/kgf-chapter-2-et00098647-08-04-2022-11-33-32.jpg",
+      "trailerurl": "https://www.youtube.com/embed/jQsE85cI384",
+      "synopsis": "The blood-soaked land of Kolar Gold Fields (KGF) has a new overlord now - Rocky, whose name strikes fear in the heart of his foes. His allies look up to Rocky as their saviour, the government sees him as a threat to law and order; enemies are clamouring for revenge and conspiring for his downfall. Bloodier battles and darker days await as Rocky continues on his quest for unchallenged supremacy.",
+      "id": 8
+    },
+    {
+      "moviename": "Barbie",
+      "hero": "ryan gosling",
+      "heroine": "Margot Robbie",
+      "director": "Greta Gerwig",
+      "production": "David Heyman",
+      "cast": [
+        "Margot Robbie ",
+        " America Ferrera"
+      ],
+      "genre": " Drama Comedy Romance",
+      "duration": "1hr 44mins",
+      "releasedate": "2023-06-10",
+      "rating": "7.6",
+      "languages": [
+        "Hindi"
+      ],
+      "posterurl": "https://assets-in.bmscdn.com/iedb/movies/images/mobile/thumbnail/xlarge/barbie-et00072466-1688969871.jpg",
+      "banner": "https://assets-in.bmscdn.com/iedb/movies/images/mobile/listing/xxlarge/barbie-et00072466-1688969871.jpg",
+      "trailerurl": "https://www.youtube.com/embed/Kb7jYOYXiVc",
+      "synopsis": "To live in Barbie Land is to be a perfect being in a perfect place. Unless you have a full-on existential crisis. Or you`re a Ken.",
+      "id": 12
     }
   ]
 }
