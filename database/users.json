@@ -34,6 +34,27 @@
       "password": "niranjan123",
       "phone": "9876543210",
       "id": 6
+    },
+    {
+      "name": "karthik",
+      "email": "karthik@gmail.com",
+      "password": "karbar",
+      "phone": "1234567899",
+      "id": 7
+    },
+    {
+      "name": "jhfjhdyf",
+      "email": "jh@hg",
+      "password": "",
+      "phone": "",
+      "id": 8
+    },
+    {
+      "name": "king",
+      "email": "king@gmail.com",
+      "password": "kimg@123",
+      "phone": "987654321",
+      "id": 9
     }
   ]
 }

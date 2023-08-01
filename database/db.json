@@ -1,123 +1,167 @@
 {
-    "movies" : [
-        {
-            "id":1,
-            "moviename":"KGF",
-            "hero":"yash",
-            "heroine":"shreenidhi shetty",
-            "director":"prashanth neel",
-            "production":"Hombale movies",
-            "cast":["vashishta" , "sanju" ,"prakash rai" , "ananth nag" ,"garuda"],
-            "genre":"action drama",
-            "duration":"2h 30m ",
-            "releasedate":"April-May  2019 (India)",
-            "rating":7.5,
-            "languages":["kannada" ,"telgu","tamil","hindi","malayalam"],
-            "posterurl":"https://assets-in.bmscdn.com/iedb/movies/images/mobile/thumbnail/xlarge/kgf-et00042769-15-12-2020-08-08-47.jpg",
-            "trailerurl":"https://www.youtube.com/embed/qXgF-iJ_ezE",
-            "synopsis":""
-        },
-        {
-            "id":2,
-            "moviename":"ohm shanthi oshaana",
-            "hero":"Nivin Pauly",
-            "heroine":"Nazriya Nazim",
-            "director":"Jude Anthany Joseph",
-            "production":"Ananya films",
-            "cast":["Pooja Mathew" , "Giri" ,"David Kanjani" , "Rachel" ,"Dr.Prasad"],
-            "genre":"Romance/comedy",
-            "duration":"2h 16m ",
-            "releasedate":"February  2014 (India)",
-            "rating":8,
-            "languages":[ "malayalam", "Tamil"],
-            "posterurl":"https://img1.hotstarext.com/image/upload/f_auto,t_vl/sources/r1/cms/prod/old_images/vertical/MOVIE/1175/1000081175/1000081175-v",
-            "trailerurl":"https://www.youtube.com/embed/GaznvwVEED4",
-            "synopsis":"A spirited young girl would stop at nothing to get the first love of her life, even if it takes seven years and several heartbreaks."
-        },
-        {    
-            "id":3,
-            "moviename":"Gunda",
-            "hero":"Mithun Chakroborty",
-            "heroine":"Padmini Kolhapure",
-            "director":"Kanti Shah",
-            "production":"Anil Shah",
-            "cast" : ["Mohan joshi","Shakti kapoor","Rami reddy","Harish Patel", "Rana Jung Bahadur"],
-            "genre":"Action drama",
-            "duration":"2h 16m",
-            "releasedate": "4th September 1998",
-            "rating": 7.3,
-            "languages": ["Hindi" , "English"],
-            "trailerurl":"https://www.youtube.com/embed/qRrRhvLxbXw",
-            "posterurl": "https://upload.wikimedia.org/wikipedia/en/7/7a/Gunda_film_poster.jpg",
-            "synopsis":"When a coolie's family is murdered by a group of gangsters and politicians, he swears revenge on them. "
-        },
-        {
-            "id":4,            
-            "moviename":"Pathu thala",
-            "hero":"Silambarasan Rajendar",
-            "heroine":"Priya Bhavani Shankar",
-            "director":"Obeli N krishna",
-            "production": "EV dinesh kumar",
-            "cast" : ["Tejeenthan Arunasalam"," Gajaraj","Gautham karthik"],
-            "genre":"Action drama",
-            "duration":"2h 31m",
-            "releasedate": "30 march 2023",
-            "rating": 7.0,
-            "languages": ["Tamil","Kannada", "Hindi","Telgu", "English"],
-            "trailerurl":"https://www.youtube.com/embed/pnUUJY3HQZk",
-            "posterurl": "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcSo9YjuqkmTNQcH0jFylkjQtaOgajlShITd76dVFJmAce3eeKCl",
-            "synopsis":"AGR (Silambarasan TR) is the head of an extremely powerful gang that is as influential as deciding every single move in Tamil Nadu politics. Guna (Goutham Karthik) shoots a police officer and seeks refuge in AGR's camp and it is revealed that Guna is actually an undercover cop. Do Guna and the police manage to nab AGR? Why is AGR involved in all the crimes?"
-        },
-        {
-            "id":5,
-            "moviename":"Kirik Party",
-            "hero":"Rakshit Shetty",
-            "heroine":"Rashmika Mandanna",
-            "director":"Rishab Shetty",
-            "production":"Paramvah Studios",
-            "cast" : ["Samyuktha Hegde","Achyuth Kumar","Pramod Shetty","Chandan Achar"],
-            "genre":"Comedy drama",
-            "duration":"2h 39m",
-            "releasedate": "30 December 2016",
-            "rating": 8.3,
-            "languages":["kannada","Hindi","Tamil"],
-            "trailerurl":"https://www.youtube.com/embed/IfvnbER_6sQ",
-            "posterurl":"http://paramvah.com/images/banner/Kirik-Part-Poster3.jpg",
-            "synopsis":"Kirik Party is the story of a gang of mischievous students, lead by the protagonist Karna (Rakshit Shetty), who has just joined an engineering college."
-        },
-        {
-            "id":6,
-            "moviename":"Dada",
-            "hero":"Kavin",
-            "heroine":"Aparna Das",
-            "director":"Ganesh K. Babu",
-            "production":"Olympia Movies",
-            "cast":["K. Bhagyaraj","Aishwariyaa Bhaskaran","Pradeep Antony"],
-            "genre":"Romantic comedy drama",
-            "duration":"2h 13m ",
-            "releasedate":"10 February 2023",
-            "rating":8.2,
-            "languages":["Tamil","telgu","hindi"],
-            "posterurl":"https://assets-in.bmscdn.com/iedb/movies/images/mobile/thumbnail/xlarge/dada-et00349087-1675324293.jpg",
-            "trailerurl":"https://www.youtube.com/embed/23mMdgo0prk",
-            "synopsis":"A couple in love, accidentally become teenage parents. Unpleasant situations make them fall apart. Manikandan, left alone with his son, struggles as a single teenage father. Fate owns him, bringing Sindhu back into his life."
-        },
-        {
-            "id":7,
-            "moviename":"Yeh Jawaani Hai Deewani",
-            "hero":"Ranbir Kapoor",
-            "heroine":"Deepika Padukone",
-            "director":"Ayan Mukerji",
-            "production":"Dharma Productions",
-            "cast":["Aditya Roy Kapoor" , "Kalki Koechlin" ,"Farooq Shaikh" , "Kunaal Roy Kapur" ,"Madhuri Dixit "],
-            "genre":"Romance/Drama  ",
-            "duration":"2h 40m",
-            "releasedate":"31 May 2013 (India)",
-            "rating":7.2,
-            "languages":["hindi"],
-            "posterurl":"https://upload.wikimedia.org/wikipedia/en/1/15/Yeh_jawani_hai_deewani.jpg",
-            "trailerurl":"https://youtu.be/Rbp2XUSeUNE",
-            "synopsis":"Kabir and Naina meet during a trekking trip where she falls in love with him but refrains from expressing it. They soon drift apart but end up meeting at a friend's wedding."
-        }
-    ]
+  "movies": [
+    {
+      "id": 1,
+      "moviename": "KGF",
+      "hero": "yash",
+      "heroine": "shreenidhi shetty",
+      "director": "prashanth neel",
+      "production": "Hombale movies",
+      "cast": [
+        "vashishta",
+        "sanju",
+        "prakash rai",
+        "ananth nag",
+        "garuda"
+      ],
+      "genre": "action drama",
+      "duration": "2h 30m ",
+      "releasedate": "April-May  2019 (India)",
+      "rating": 7.5,
+      "languages": [
+        "kannada",
+        "telgu",
+        "tamil",
+        "hindi",
+        "malayalam"
+      ],
+      "posterurl": "https://assets-in.bmscdn.com/iedb/movies/images/mobile/thumbnail/xlarge/kgf-et00042769-15-12-2020-08-08-47.jpg",
+      "banner": "https://assets-in.bmscdn.com/iedb/movies/images/mobile/listing/xxlarge/kgf-et00042769-15-12-2020-08-08-47.jpg",
+      "trailerurl": "https://www.youtube.com/embed/qXgF-iJ_ezE",
+      "synopsis": "K.G.F is an Indian period action film series set mostly in the Kolar Gold Fields, which gives the series its name, created by Prashanth Neel and produced by Hombale Films starring Yash in lead role with an ensemble supporting cast.K.G.F is an Indian period action film series set mostly in the Kolar Gold Fields, which gives the series its name, created by Prashanth Neel and produced by Hombale Films starring Yash in lead role with an ensemble supporting cast."
+    },
+    {
+      "id": 2,
+      "moviename": "ohm shanthi oshaana",
+      "hero": "Nivin Pauly",
+      "heroine": "Nazriya Nazim",
+      "director": "Jude Anthany Joseph",
+      "production": "Ananya films",
+      "cast": [
+        "Pooja Mathew",
+        "Giri",
+        "David Kanjani",
+        "Rachel",
+        "Dr.Prasad"
+      ],
+      "genre": "Romance/comedy",
+      "duration": "2h 16m ",
+      "releasedate": "February  2014 (India)",
+      "rating": 8,
+      "languages": [
+        "malayalam",
+        "Tamil"
+      ],
+      "posterurl": "https://img1.hotstarext.com/image/upload/f_auto,t_vl/sources/r1/cms/prod/old_images/vertical/MOVIE/1175/1000081175/1000081175-v",
+      "banner": "https://assets-in.bmscdn.com/iedb/movies/images/mobile/listing/xxlarge/om-shanti-oshana--malayalam--et00020114-24-03-2017-18-23-12.jpg",
+      "trailerurl": "https://www.youtube.com/embed/GaznvwVEED4",
+      "synopsis": "A spirited young girl would stop at nothing to get the first love of her life, even if it takes seven years and several heartbreaks."
+    },
+    {
+      "id": 4,
+      "moviename": "Pathu thala",
+      "hero": "Silambarasan Rajendar",
+      "heroine": "Priya Bhavani Shankar",
+      "director": "Obeli N krishna",
+      "production": "EV dinesh kumar",
+      "cast": [
+        "Tejeenthan Arunasalam",
+        " Gajaraj",
+        "Gautham karthik"
+      ],
+      "genre": "Action drama",
+      "duration": "2h 31m",
+      "releasedate": "30 march 2023",
+      "rating": 7,
+      "languages": [
+        "Tamil",
+        "Kannada",
+        "Hindi",
+        "Telgu",
+        "English"
+      ],
+      "trailerurl": "https://www.youtube.com/embed/pnUUJY3HQZk",
+      "banner": "https://assets-in.bmscdn.com/iedb/movies/images/mobile/listing/xxlarge/pathu-thala-et00333005-1672646997.jpg",
+      "posterurl": "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcSo9YjuqkmTNQcH0jFylkjQtaOgajlShITd76dVFJmAce3eeKCl",
+      "synopsis": "AGR (Silambarasan TR) is the head of an extremely powerful gang that is as influential as deciding every single move in Tamil Nadu politics. Guna (Goutham Karthik) shoots a police officer and seeks refuge in AGR's camp and it is revealed that Guna is actually an undercover cop. Do Guna and the police manage to nab AGR? Why is AGR involved in all the crimes?"
+    },
+    {
+      "id": 5,
+      "moviename": "Kirik Party",
+      "hero": "Rakshit Shetty",
+      "heroine": "Rashmika Mandanna",
+      "director": "Rishab Shetty",
+      "production": "Paramvah Studios",
+      "cast": [
+        "Samyuktha Hegde",
+        "Achyuth Kumar",
+        "Pramod Shetty",
+        "Chandan Achar"
+      ],
+      "genre": "Comedy drama",
+      "duration": "2h 39m",
+      "releasedate": "30 December 2016",
+      "rating": 8.3,
+      "languages": [
+        "kannada",
+        "Hindi",
+        "Tamil"
+      ],
+      "trailerurl": "https://www.youtube.com/embed/IfvnbER_6sQ",
+      "posterurl": "http://paramvah.com/images/banner/Kirik-Part-Poster3.jpg",
+      "banner": "https://assets-in.bmscdn.com/iedb/movies/images/mobile/listing/xxlarge/kirik-party-et00050740-20-11-2020-03-14-08.jpg",
+      "synopsis": "Kirik Party is the story of a gang of mischievous students, lead by the protagonist Karna (Rakshit Shetty), who has just joined an engineering college."
+    },
+    {
+      "id": 6,
+      "moviename": "Dada",
+      "hero": "Kavin",
+      "heroine": "Aparna Das",
+      "director": "Ganesh K. Babu",
+      "production": "Olympia Movies",
+      "cast": [
+        "K. Bhagyaraj",
+        "Aishwariyaa Bhaskaran",
+        "Pradeep Antony"
+      ],
+      "genre": "Romantic comedy drama",
+      "duration": "2h 13m ",
+      "releasedate": "10 February 2023",
+      "rating": 8.2,
+      "languages": [
+        "Tamil",
+        "telgu",
+        "hindi"
+      ],
+      "posterurl": "https://assets-in.bmscdn.com/iedb/movies/images/mobile/thumbnail/xlarge/dada-et00349087-1675324293.jpg",
+      "banner": "https://assets-in.bmscdn.com/iedb/movies/images/mobile/listing/xxlarge/dada-et00349087-1675324293.jpg",
+      "trailerurl": "https://www.youtube.com/embed/23mMdgo0prk",
+      "synopsis": "A couple in love, accidentally become teenage parents. Unpleasant situations make them fall apart. Manikandan, left alone with his son, struggles as a single teenage father. Fate owns him, bringing Sindhu back into his life."
+    },
+    {
+      "id": 7,
+      "moviename": "Yeh Jawaani Hai Deewani",
+      "hero": "Ranbir Kapoor",
+      "heroine": "Deepika Padukone",
+      "director": "Ayan Mukerji",
+      "production": "Dharma Productions",
+      "cast": [
+        "Aditya Roy Kapoor",
+        "Kalki Koechlin",
+        "Farooq Shaikh",
+        "Kunaal Roy Kapur",
+        "Madhuri Dixit "
+      ],
+      "genre": "Romance/Drama  ",
+      "duration": "2h 40m",
+      "releasedate": "31 May 2013 (India)",
+      "rating": 7.2,
+      "languages": [
+        "hindi"
+      ],
+      "posterurl": "https://upload.wikimedia.org/wikipedia/en/1/15/Yeh_jawani_hai_deewani.jpg",
+      "banner": "https://assets-in.bmscdn.com/iedb/movies/images/mobile/listing/xxlarge/yeh-jawaani-hai-deewani-et00012104-09-11-2020-02-58-18.jpg",
+      "synopsis": "Kabir and Naina meet during a trekking trip where she falls in love with him but refrains from expressing it. They soon drift apart but end up meeting at a friend's wedding."
+    }
+  ]
 }

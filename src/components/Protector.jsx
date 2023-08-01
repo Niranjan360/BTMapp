@@ -20,3 +20,12 @@ const Protector = ({Child}) => {
     </>  );
 }
 export default Protector;
+
+
+/*
+HOC 
+
+WHAT : a higher-order component is a function that takes a component and returns a new component.
+
+WHY : A higher-order component (HOC) is an advanced technique in React for reusing component logic. 
+*/

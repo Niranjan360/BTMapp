@@ -14,20 +14,20 @@ function App()
   return(
     <BrowserRouter>
       <div className="app">
-        { !(window.location.pathname=="/" || window.location.pathname=="/login") &&  <Navbar/>}
         <Routes>
-          <Route path="/" element={<Signup/>}/>
+          <Route path="/signup" element={<Signup/>}/>
+
           <Route path="/login" element={<Login/>}/>
 
+          <Route path="/" element={<Protector Child={Home}/>}/>
 
-          <Route path="/home" element={<Protector Child={Home}/>}/>
           <Route path="/addmovie" element={<Protector Child={Addmovie}/>}/>
 
+          <Route path="/favmovie" element={<Protector Child={Watchlist}/>}/>
 
-          <Route path="/favmovie" element={<Watchlist/>}/>
-          <Route path="/profile" element={<Profile/>}/>
+          <Route path="/profile" element={<Protector Child={Profile}/>}/>
+
           <Route path="/moviedetails/:id" element={<Moviedetails/>}/>
-
 
         </Routes>
       </div>

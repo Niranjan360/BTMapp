@@ -1,5 +1,9 @@
 import { useEffect, useState } from "react";
 import Movielist from "./Movielist";
+import Slider from "./Slider";
+import BeatLoader from "react-spinners/BeatLoader";
+import Navbar from "./Navbar";
+
 
 const Home = () => {    
 
@@ -35,11 +39,14 @@ const Home = () => {
 
     return ( 
         <>
+            <Navbar/>
             <div className="home">
 
                     {error!=null && <h1> {error} </h1>}
 
-                    {pending==true && <div id="loader"></div>}
+                    {pending==true && <div id="loader"><BeatLoader color="#009e6f" size="25"/></div> }
+
+                    {movies && <Slider movies={movies}/>}
 
                     {movies &&  <>
                     <Movielist movies={movies} title="All movies"/>

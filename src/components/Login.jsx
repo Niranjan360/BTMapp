@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
@@ -36,7 +36,7 @@ const Login = () => {
                 toast.success("login Successfull");
                 setTimeout(()=>{ 
                     localStorage.setItem("currentUser" , JSON.stringify(currentUser))
-                    navigate("/home") 
+                    navigate("/") 
                 } , 1500)
             }
         })
@@ -45,7 +45,6 @@ const Login = () => {
     return ( 
     <div className="login"> 
         <h1>Login to use the App</h1>
-        <hr />
 
         <form onSubmit={handleLogin}>
             <input type="text" placeholder="Name" 
@@ -56,7 +55,12 @@ const Login = () => {
             value={password} onChange={(e)=>{setPassword(e.target.value);}}/>
 
             <input type="submit" value="Login" />
+
+            <span>Forgot Password ? <Link to="/">click here</Link></span>
+
         </form>
+
+        <span>Don't have a account ? <Link to="/signup">create here</Link></span>
 
         <ToastContainer />
 

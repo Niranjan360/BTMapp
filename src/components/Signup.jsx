@@ -36,7 +36,6 @@ const Signup = () => {
 
     return (<div className="signup">
         <h1>Register to use the App</h1>
-        <hr />
 
         <form onSubmit={handleSignup}>
             <input type="text" placeholder="Name" 
