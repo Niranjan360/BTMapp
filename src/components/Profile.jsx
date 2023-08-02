@@ -1,7 +1,9 @@
 import { useNavigate } from "react-router-dom";
 import Navbar from "./Navbar";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import Modal from 'react-modal';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const customStyles = {
     content: {
@@ -19,7 +21,12 @@ const customStyles = {
 const Profile = () => {
 
     let[user , setUser] = useState(null);
-
+    let name = useRef();
+    let email = useRef();
+    let phone = useRef()
+    let op = useRef();
+    let np = useRef();
+    let cp = useRef();
     let navigate = useNavigate();
 
     let handleLogout  = ()=>{
@@ -31,41 +38,99 @@ const Profile = () => {
         }
     }
 
-    let handleUpdateProfile = ()=>{
-        // logic update profile == PUT 
-        // name , email , phone == new value
-        // password == old value
+    let handleUpdateProfile = (e)=>{
+        e.preventDefault();
+        let updatedUser = {
+            id : user.id,
+            name : name.current.value,
+            email : email.current.value,
+            phone : phone.current.value,
+            password : user.password
+        }
 
+        fetch("http://localhost:5000/users/"+ user.id , {
+                                                            method:"PUT",
+                                                            headers :{"Content-Type":"application/json"},
+                                                            body:JSON.stringify(updatedUser)
+                                                        })
+        .then(()=>{
+            localStorage.setItem("currentUser" , JSON.stringify(updatedUser))
+            setUser(updatedUser);
+            toast.success("Profile updated succesffuly");
+            closeModal();
+        })
     }
 
-    let handleResetPassword = ()=>{
-        // logic update password == PUT 
-        // password == new value if and only id=f old password is same as typed one
-        // name , email , phone == old values
+    let handleResetPassword = (e)=>{
+        e.preventDefault();
+
+        if(op.current.value == user.password )
+        {
+            if(op.current.value == np.current.value)
+            {   
+                toast.warning("New password is same as old , please give different.")
+            }
+            else if(np.current.value != cp.current.value)
+            {
+                toast.warning("Password mismatch , please type both as same !!");
+            }
+            else
+            {
+                let updatedUser = {
+                    id : user.id,
+                    name:user.name,
+                    email:user.email,
+                    phone:user.phone,
+                    password : np.current.value
+                }
+
+                fetch("http://localhost:5000/users/"+ user.id , {
+                                                            method:"PUT",
+                                                            headers :{"Content-Type":"application/json"},
+                                                            body:JSON.stringify(updatedUser)
+                                                        })
+                .then(()=>{
+                    localStorage.removeItem("currentUser")
+                    toast.success("Password reset successfull , please login again");
+                    setTimeout(()=>{ navigate("/login") } , 2000);
+                })
+            }
+        }
+        else{
+            toast.warning("Sorry invalid old password !!")
+        }
+
 
     }
-
 
     useEffect(()=>{
         let currentUser = JSON.parse(localStorage.getItem("currentUser"));
         setUser(currentUser);
-    })
+    },[])
 
+    /*--------------- functions for 1st modal componment ---------------------------*/
     let subtitle;
     const [modalIsOpen, setIsOpen] = useState(false);
 
     function openModal() {
-    setIsOpen(true);
+        setIsOpen(true);
     }
 
     function afterOpenModal() {
-    // references are now sync'd and can be accessed.
-    subtitle.style.color = '#f00';
+        // references are now sync'd and can be accessed.
+        subtitle.style.color = '#f00';
+        name.current.value = user.name;
+        email.current.value = user.email;
+        phone.current.value = user.phone;
     }
 
     function closeModal() {
     setIsOpen(false);
     }
+    /* ----------------------------------------------------------------------- */
+
+
+    /*--------------- functions for 2nd modal componment ---------------------------*/
 
     let subtitle1;
     const [modalIsOpen1, setIsOpen1] = useState(false);
@@ -82,6 +147,8 @@ const Profile = () => {
     function closeModal1() {
     setIsOpen1(false);
     }
+    /* ----------------------------------------------------------------------- */
+
 
     return ( 
         <div>
@@ -112,10 +179,10 @@ const Profile = () => {
             >
                 <h2 ref={(_subtitle) => (subtitle = _subtitle)}>Update profile</h2>
 
-                <form className="update-profile">
-                    <input type="text" placeholder="Name" />
-                    <input type="email" placeholder="email" />
-                    <input type="tel" max="10" min="10" placeholder="phone" />
+                <form className="update-profile" onSubmit={handleUpdateProfile}>
+                    <input type="text" placeholder="Name" ref={name}/>
+                    <input type="email" placeholder="email" ref={email} />
+                    <input type="tel" max="10" min="10" placeholder="phone" ref={phone} />
                     <input type="submit" value="update profile" />
                 </form>
                 
@@ -130,16 +197,16 @@ const Profile = () => {
             >
                 <h2 ref={(_subtitle) => (subtitle1 = _subtitle)}>Reset password</h2>
 
-                <form className="update-password">
-                    <input type="text" placeholder="Old password" />
-                    <input type="password" placeholder="New password" />
-                    <input type="text" placeholder="Confirm password" />
+                <form className="update-password" onSubmit={handleResetPassword}>
+                    <input type="text" placeholder="Old password" ref={op} />
+                    <input type="password" placeholder="New password" ref={np}/>
+                    <input type="text" placeholder="Confirm password" ref={cp} />
                     <input type="submit" value="Reset password" />
                 </form>
                 
             </Modal>
 
-
+            <ToastContainer />
 
         </div>
     );

@@ -7,6 +7,7 @@
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
     "axios": "^1.4.0",
+    "concurrently": "^8.2.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-modal": "^3.16.1",
@@ -22,7 +23,10 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "src": "cd src && npm start",
+    "server": "cd src/database && npx json-server --watch users.json --port 5000",
+    "start_full_app":"concurrently \"npm run src\" \"npm run server\"   "
   },
   "eslintConfig": {
     "extends": [

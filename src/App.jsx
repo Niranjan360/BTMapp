@@ -6,6 +6,7 @@ import Moviedetails from "./components/Moviedetails";
 import Navbar from "./components/Navbar";
 import Profile from "./components/Profile";
 import Protector from "./components/Protector";
+import Search from "./components/Search";
 import Signup from "./components/Signup";
 import Watchlist from "./components/Watchlist";
 import {BrowserRouter , Routes , Route} from 'react-router-dom'
@@ -31,6 +32,8 @@ function App()
           <Route path="/moviedetails/:id" element={<Moviedetails/>}/>
 
           <Route path="/edit/:id" element={<Editmovie/>}/>
+
+          <Route path="/search/:keyword" element={<Search/>}/>
 
         </Routes>
       </div>

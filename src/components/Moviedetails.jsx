@@ -82,6 +82,8 @@ const Moviedetails = () => {
                                 <button onClick={handleDelete}>Delete</button>
 
                             </div> }
+
+                
                 
             </div>);
 }

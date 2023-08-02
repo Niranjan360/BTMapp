@@ -1,12 +1,12 @@
-import { useEffect, useState } from "react";
-import Movielist from "./Movielist";
-import Slider from "./Slider";
-import BeatLoader from "react-spinners/BeatLoader";
+import { useParams } from "react-router-dom";
 import Navbar from "./Navbar";
+import Movielist from "./Movielist";
+import BeatLoader from "react-spinners/BeatLoader";
+import { useEffect, useState } from "react";
 
+const Search = () => {
 
-const Home = () => {    
-
+    let {keyword} = useParams();
     let[movies , setMovies] = useState(null);
     let[error , setError] = useState(null);
     let[pending , setPending] = useState(true);
@@ -37,30 +37,16 @@ const Home = () => {
     return ( 
         <>
             <Navbar/>
-            <div className="home">
+            <div className="search-comp" style={{padding:"10px 80px"}}>
+                {error!=null && <h1> {error} </h1>}
 
-                    {error!=null && <h1> {error} </h1>}
+                {pending==true && <div id="loader"><BeatLoader color="#009e6f" size="25"/></div> } 
 
-                    {pending==true && <div id="loader"><BeatLoader color="#009e6f" size="25"/></div> }
-
-                    {movies && <Slider movies={movies}/>}
-
-                    {movies &&  <>
-                    <Movielist movies={movies} title="All movies"/>
-
-                    <Movielist movies={movies.filter((m)=>{ return m.rating>=8 })} title="Top rated movies"/>
-
-                    <Movielist movies={movies.filter((m)=>{ return m.languages[0].toLowerCase() =="hindi" })} title="Bollywood"/>
-
-                </>}
-            </div>        
-
+                {movies && <Movielist   movies={movies.filter((m)=>{ return m.moviename.toLowerCase().startsWith(keyword.toLowerCase())})} 
+                                        title={`search result for : ${keyword}`}/>}
+            </div>
         </>
+
     );
 }
-export default Home;
-
-
-
-
-
+export default Search;
