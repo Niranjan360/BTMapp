@@ -3,36 +3,12 @@ import Movielist from "./Movielist";
 import Slider from "./Slider";
 import BeatLoader from "react-spinners/BeatLoader";
 import Navbar from "./Navbar";
+import useFetch from "../Hooks/useFetch";
 
 
 const Home = () => {    
 
-    let[movies , setMovies] = useState(null);
-    let[error , setError] = useState(null);
-    let[pending , setPending] = useState(true);
-
-    useEffect(()=>{
-            setTimeout(()=>{
-                fetch("http://localhost:4000/movies")
-                .then((res)=>{
-                    if(res.ok==true){
-                        return res.json() 
-                    }
-                    else{
-                        throw new Error('Sorry not data found for this please try for different')
-                    }
-                })
-                .then((data)=>{
-                    setMovies(data);
-                    setPending(false);
-                })
-                .catch((err)=>{
-                    setError(err.message);
-                    setPending(false);
-                })
-
-            } , 1000)
-    } , [])
+    let {data : movies , error , pending} = useFetch("http://localhost:4000/movies")
 
     return ( 
         <>

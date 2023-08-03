@@ -4,9 +4,8 @@ import { Link } from "react-router-dom";
 const Navbar = () => {
 
     let [searchKey , setSearchKey] = useState("");
-    let[movienames , setMovienames]= useState(null);
-    let[filteredname , setfilteredname]= useState(null);
-
+    let [movienames , setmovienames] = useState([]);
+    let [filteredMovienames , setfilteredMovienames] = useState([]);
 
     useEffect(()=>{
         fetch("http://localhost:4000/movies")
@@ -19,12 +18,15 @@ const Navbar = () => {
             }
         })
         .then((data)=>{
-            let m = data.map((movie)=>{ return movie.moviename});
-            setMovienames(m);
-            m = movienames.filter((name)=>{ return name.toLowerCase().startsWith(searchKey.toLowerCase())});
-            setfilteredname(m);
+            let m = data.map((m)=>{ return m.moviename})
+            console.log(m);
+            setmovienames(m);
+            m = m.filter((mName)=>{ return mName.toLowerCase().startsWith(searchKey.toLowerCase())})
+            setfilteredMovienames(m);
         })
     } , [searchKey])
+
+    let[menu , setMenu] = useState(false);
     
     return ( 
         <nav>
@@ -35,15 +37,20 @@ const Navbar = () => {
                 </Link>
             </div>
             <div id="searchbar">
+
                 <input type="text" placeholder="Search Movies" 
                 value={searchKey} onChange={(e)=>{setSearchKey(e.target.value);  }} />
 
                 <Link to={`/search/${searchKey}`}><button>search</button></Link>
 
-                {movienames && searchKey.length>0  && 
+                {filteredMovienames && searchKey.length>0 && 
                 <div id="suggestion">
                     {
-                        filteredname.map((name)=>{ return(<p>{name}</p>)})
+                        filteredMovienames.map((mName)=>{ return(
+                        <Link to={`/search/${mName}`}>
+                            <p onClick={(e)=>{ setSearchKey(e.target.innerText)}}>{mName}</p>
+                        </Link>
+                        )})
                     }
                 </div>}
 
@@ -53,8 +60,16 @@ const Navbar = () => {
                 <Link to="/favmovie">Watchlist</Link>
                 <Link to="/profile"  className='bx bxs-user-circle'> </Link>
             </div>
-
-
+            <div id="hamberger" onClick={()=>{setMenu(!menu)}}>
+            {menu ?     <i class='bx bx-menu-alt-left' ></i> : 
+                        <i class='bx bx-menu'></i>
+                        }
+            </div>
+            {menu && <div id="menu">
+                        <Link to="/addmovie">Add Movie</Link>
+                        <Link to="/favmovie">Watchlist</Link>
+                        <Link to="/profile">Profile</Link>
+                    </div>}
         </nav>
     );
 }

@@ -17,7 +17,6 @@ const customStyles = {
 };
 
 
-
 const Profile = () => {
 
     let[user , setUser] = useState(null);

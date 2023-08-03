@@ -1,10 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Bacasime+Antique&family=Belanosima:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bacasime+Antique&family=Poppins:wght@300&display=swap');
 
 *{
   margin: 0px;
   padding: 0px;
   box-sizing: border-box;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-family: 'Poppins', sans-serif;  
   color: black;
 }
 body{
@@ -84,27 +85,82 @@ nav{
   color: white;
   font-size: 40px;
 }
+#searchbar{
+  /* background-color: #ff0000; */
+  width: 30%;
+  border: none;
+  outline: white solid 1px;
+  outline-offset: 2px;
+  border-radius: 5px;
+}
 #searchbar input{
-  width: 300px;
-  height: 35px;
+  width: 70%;
+  height: 30px;
   padding-left: 20px;
   border: none;
-  border-radius: 20px 0px 0px 20px;
+  border-radius: 5px 0px 0px 5px;
   font-size: 15px;
 }
+#searchbar input:focus{
+  outline: none;
+}
+
+
+
 #searchbar button{
-  background-color: rgb(238, 238, 238);
-  color: rgb(65, 60, 60);
-  width: 100px;
-  height: 35px;
+  background-color: rgb(255, 255, 255);
+  color: #009e6f;
+  width: 30%;
+  height: 30px;
   border: none;
-  border-radius: 0px 20px 20px 0px;
+  border-left: #009e6f solid 1px;
+  border-radius: 0px 5px 5px 0px;
   font-size: 15px;
+  font-weight: 600;
 }
 #searchbar button:active{
   background-color: white;
   color: #17252A;
 }
+
+
+#searchbar{
+  position: relative;
+}
+
+
+#searchbar input:focus ~ #suggestion{
+  display: block;
+}
+
+#suggestion{
+  display: none;
+  position: absolute;
+  top:35px;
+  left:5px;
+
+  background-color: rgba(0, 0, 0, 0.575);
+  border-radius: 0px 0px 10px 10px;
+  width: 325px;
+}
+#suggestion:hover{
+  display: block;
+}
+
+#suggestion p{
+  font-size: 18px;
+  padding-left: 10px;
+  margin: 5px 0px;
+  transition: 0.3s;
+  color: white; 
+  font-weight: 400;
+}
+#suggestion p:hover{
+  transform: scale(1.05);
+  cursor: pointer;
+}
+
+
 #nav-link{
   display: flex;
 }
@@ -126,7 +182,6 @@ nav{
   color: #17252A;
   background-color: white;
 }
-
 #nav-link a:last-child{
   font-size:40px;
   color: white;
@@ -202,11 +257,47 @@ nav{
 /* -----------------------MOVIEDETALS-------------- */
 
 .movie-details{
-  padding: 10px 100px;
+  /* background-color: rgb(204, 242, 255); */
+  padding: 50px 100px;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  justify-content:center;
+  align-items: flex-start ;
   flex-wrap: wrap;
+}
+.movie-details>img{
+  width: 320px;
+  height: 400px;
+  margin: 0px 50px;
+  object-fit: scale-down;
+}
+.details{
+  width: 500px;
+}
+.details p{
+  margin: 10px 0px;
+}
+.details p span{
+  color: black;
+  font-size: 18px;
+  font-weight: 600;
+}
+.details button{
+  background-color: #009e6f;
+  color: #ffffff;
+  padding: 8px 18px;
+  margin-right:20px;
+  border: #009e6f solid 1px;
+  border-radius: 3px;
+}
+.details button:hover{
+  background-color: #ffffff;
+  color: #009e6f;
+}
+.trailer-cont{
+  margin-top: 20px;
+}
+.trailer-cont h1{
+  margin: 5px 0px;
 }
 
 
@@ -342,29 +433,58 @@ nav{
   background-color: #009e6f;
   color: white;
 }
-
-
-#searchbar{
-  position: relative;
+#hamberger{
+  display: none;
 }
-#suggestion{
+#hamberger i{
+  color: white;
+  font-size: 30px;
+}
+#menu{
+  background-color: rgba(0, 0, 0, 0.515);
+  padding: 10px;
   position: absolute;
-  top:35px;
-  left:20px;
-
-  background-color: rgba(0, 0, 0, 0.575);
-  border-radius: 0px 0px 10px 10px;
-  width: 280px;
+  right: 80px;
+  top: 70px;
+  animation: menuanime 0.3s;
 }
-#suggestion p{
+#menu a{
+  display: block;
   font-size: 18px;
-  padding-left: 10px;
-  margin: 5px 0px;
-  transition: 0.3s;
-  color: white; 
-  font-weight: 400;
+  color: #ffffff;
+  text-decoration: none;
+  margin: 8px 0px;
 }
-#suggestion p:hover{
-  transform: scale(1.05);
-  cursor: pointer;
+@keyframes menuanime {
+  0%{
+    transform: scale(0);
+  }
+  100%{
+    transform: scale(1);
+  }
+}
+
+@media (max-width:950px) 
+{
+  nav{
+  }
+  #nav-link{
+    display: none;
+  }
+  #hamberger{
+    display: block;
+  }
+}
+@media (max-width:550px) 
+{
+  nav{
+    padding: 0px 30px;
+    justify-content: space-between;
+  }
+  #logo a{
+    font-size:22px;
+  }
+  #logo a span{
+    font-size: 30px;
+  }
 }
