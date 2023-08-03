@@ -466,6 +466,7 @@ nav{
 
 @media (max-width:950px) 
 {
+
   nav{
   }
   #nav-link{
@@ -473,6 +474,73 @@ nav{
   }
   #hamberger{
     display: block;
+  }
+  .home{
+    padding: 10px 20px;
+  }
+  .home>h1{
+    position: sticky;
+    top: 60px;
+    z-index: 10;
+    background-color: white;
+    color: #009e6f;
+    font-size: 30px;
+    margin: 10px 0px;
+  }
+  
+  .movies-list{
+    width: 100%;
+    margin: auto;
+    padding: 10px;
+    display: flex;
+    overflow: scroll;
+  }
+  .movies-list::-webkit-scrollbar{
+    display: none;
+  }
+  .movie{
+    /* background-color: #131313; */
+    width: 220px;
+    height: auto;
+    margin: 3px 10px;
+    padding: 10px;
+    /* border: solid 0.5px rgba(0, 0, 0, 0.336); */
+    border-radius: 7px;
+    transition: 0.3s;
+  }
+  .movie a{
+    text-decoration: none;
+  }
+  .movie:hover{
+    transform: scale(1.05);
+  }
+  
+  .movie h1{
+    font-size: 20px;
+    color: rgb(66, 62, 62);
+  }
+  .movie p{
+    color: rgb(61, 57, 57);
+    font-size: 20px;
+  }
+  .movie img{
+    width: 200px;
+    height: 250px;
+    border-radius: 5px;
+  }
+  #profilePic{
+    margin-left: 40px;
+  }
+  .profile h1{
+    margin-left: 40px;
+    font-size: 20px;
+  }
+  .btns{
+    margin: 20px 0px 20px 40px;
+  }
+  .profile button{
+    padding: 5px 17px;
+  font-size: 14px;
   }
 }
 @media (max-width:550px) 

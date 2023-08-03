@@ -8,7 +8,7 @@ let Slider = ({movies})=>{
             <Sliderify autoPlay={true}  slideDurationInSecs="3" showSpot={false}>
             {
                 movies.map((movie)=>{
-                    return(<div style={{ height: "500px", background:`url(${movie.banner})`,backgroundRepeat:"no-repeat",backgroundSize:"cover" , color: "white" }}>
+                    return(<div style={{ height: "500px", background:`url(${movie.banner})`,backgroundRepeat:"no-repeat",backgroundSize:"contain" , color: "white" , backgroundPosition:"center" }}>
                         </div>) 
                 })
             }
