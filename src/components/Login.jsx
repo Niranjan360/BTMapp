@@ -17,6 +17,8 @@ const Login = () => {
         fetch("https://niranjan360.github.io/movies/users.json")
         .then(res=>res.json())
         .then((data)=>{
+            data = data.users;
+            console.log(data);
             for (let i = 0; i < data.length; i++) 
             {
                 if(data[i].name == name)
