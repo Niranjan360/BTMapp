@@ -1,11 +1,9 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 const Login = () => {
-
-    console.log("component rendered");
 
     let [name , setName] = useState("");
     let [password , setPassword] = useState("");
@@ -16,7 +14,7 @@ const Login = () => {
 
         let currentUser = null;
 
-        fetch("http://localhost:5000/users")
+        fetch("https://niranjan360.github.io/movies/users.json")
         .then(res=>res.json())
         .then((data)=>{
             for (let i = 0; i < data.length; i++) 
