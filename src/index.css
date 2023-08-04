@@ -219,6 +219,7 @@ nav{
   /* border: solid 0.5px rgba(0, 0, 0, 0.336); */
   border-radius: 7px;
   transition: 0.3s;
+  position: relative;
 }
 .movie a{
   text-decoration: none;
@@ -239,6 +240,20 @@ nav{
   width: 200px;
   height: 250px;
   border-radius: 7px;
+}
+.movie i{
+  font-size: 25px;
+  color: red;
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  animation: beat 0.5s linear;
+}
+
+@keyframes beat {
+  0%{transform: scale(0.6);}
+  70%{transform: scale(1.4);}
+  100%{transform: scale(1);}
 }
 
 
@@ -462,6 +477,17 @@ nav{
     transform: scale(1);
   }
 }
+
+.fav-movies{
+  padding: 20px 80px;
+}
+.fav-movies h1{
+  color: #009e6f;
+}
+.fav-movies h2{
+  color: tomato;
+}
+
 
 @media (max-width:950px) 
 {

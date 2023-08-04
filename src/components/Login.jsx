@@ -14,9 +14,10 @@ const Login = () => {
 
         let currentUser = null;
 
-        fetch("http://localhost:5000/users")
+        fetch("https://niranjan360.github.io/movies/users.json")
         .then(res=>res.json())
         .then((data)=>{
+            data = data.users;
             for (let i = 0; i < data.length; i++) 
             {
                 if(data[i].name == name)
@@ -37,10 +38,19 @@ const Login = () => {
                 setTimeout(()=>{ 
                     localStorage.setItem("currentUser" , JSON.stringify(currentUser))
                     navigate("/") 
-                } , 1500)
+                } , 2500)
             }
         })
     }
+
+    useEffect(()=>{ 
+
+        // return function will work when this current component has been unmounted
+        return ()=>{
+            document.body.style.background = "none";
+            document.body.style.backgroundColor = "white"
+        } 
+    } ,[])
 
     return ( 
     <div className="login"> 

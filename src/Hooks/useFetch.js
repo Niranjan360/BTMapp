@@ -19,7 +19,7 @@ function useFetch(reqAPI)
                     }
                 })
                 .then((data)=>{
-                    setData(data);
+                    setData(data.movies);
                     setPending(false);
                 })
                 .catch((err)=>{

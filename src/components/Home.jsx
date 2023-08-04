@@ -5,10 +5,17 @@ import BeatLoader from "react-spinners/BeatLoader";
 import Navbar from "./Navbar";
 import useFetch from "../Hooks/useFetch";
 
-
 const Home = () => {    
 
-    let {data : movies , error , pending} = useFetch("http://localhost:4000/movies")
+    let {data : movies , error , pending} = useFetch("https://niranjan360.github.io/movies/db.json");
+
+    useEffect(()=>{
+        let x =  localStorage.getItem("wishlist");
+        if(x==null)
+        {
+            localStorage.setItem("wishlist" , "[]")
+        }
+    } , []);
 
     return ( 
         <>
