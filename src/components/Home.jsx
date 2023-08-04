@@ -8,8 +8,7 @@ import useFetch from "../Hooks/useFetch";
 
 const Home = () => {    
 
-    let {data : movies , error , pending} = useFetch("https://niranjan360.github.io/movies/db.json")
-    
+    let {data : movies , error , pending} = useFetch("http://localhost:4000/movies")
 
     return ( 
         <>
